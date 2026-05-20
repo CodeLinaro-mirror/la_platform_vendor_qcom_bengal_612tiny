@@ -33,6 +33,9 @@ BOARD_RAMDISK_USE_LZ4 := true
 -include $(QCPATH)/common/bengal/BoardConfigVendor.mk
 
 USE_OPENGL_RENDERER := true
+USESECTOOLV2 := true
+
+SECTOOLS_SECURITY_PROFILE := $(QCPATH)/securemsm/security_profiles/divar_security_profile.xml $(QCPATH)/securemsm/security_profiles/kamorta_security_profile.xml
 
 #Enable dtb in boot image and boot image header version 3 support.
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
