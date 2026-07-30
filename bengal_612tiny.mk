@@ -442,6 +442,11 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 FEATURE_SLIM_AP := false
 FEATURE_GPS_LOC_QSH := false
 
+ifeq ($(TARGET_HAS_QTI_OPTIMIZATIONS), true)
+PRODUCT_COPY_FILES += \
+    device/qcom/bengal_612tiny/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
+endif
+
 # Enable support for APEX updates
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
