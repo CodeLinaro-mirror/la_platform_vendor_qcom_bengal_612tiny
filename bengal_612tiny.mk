@@ -11,6 +11,7 @@ PRODUCT_CHECK_PREBUILT_MAX_PAGE_SIZE := false
 
 #Flag to Enable 64 bit only configurayion
 TARGET_SUPPORTS_64_BIT_ONLY := true
+TARGET_DEFINES_MXR_CONFIG := true
 
 # Enable AVB 2.0
 BOARD_AVB_ENABLE := true
