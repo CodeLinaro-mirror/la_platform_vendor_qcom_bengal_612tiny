@@ -448,6 +448,10 @@ PRODUCT_COPY_FILES += \
     device/qcom/bengal_612tiny/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 endif
 
+# Mediaserver 64 Bit enable
+PRODUCT_VENDOR_PROPERTIES+= \
+     ro.mediaserver.64b.enable=true
+
 # Enable support for APEX updates
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
